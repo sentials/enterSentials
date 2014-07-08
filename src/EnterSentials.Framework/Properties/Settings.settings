@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EnterSentials.Framework.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ShieldFromDataAccessExceptionsExceptionPolicyName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ShieldFromDataAccessExceptions</Value>
+    </Setting>
+    <Setting Name="ShieldFromBusinessLogicExceptionsExceptionPolicyName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ShieldFromBusinessLogicExceptions</Value>
+    </Setting>
+    <Setting Name="DefaultExceptionPolicyName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Default</Value>
+    </Setting>
+    <Setting Name="Culture_EnglishUS_Name" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">en-US</Value>
+    </Setting>
+    <Setting Name="ApplicationConfigurationSectionName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">application</Value>
+    </Setting>
+    <Setting Name="ComponentsProviderAssemblyQualifiedTypeName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">EnterSentials.Framework.Unity.UnityBasedComponents, EnterSentials.Framework.Unity</Value>
+    </Setting>
+    <Setting Name="AuditableDomainObjectIsActiveOnCreation" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShouldIncludeNoCacheHeaderForCors" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ShouldIncludePreflightResponseMaxAgeHeaderForCors" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PreflightResponseMaxAgeInSeconds" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3600</Value>
+    </Setting>
+    <Setting Name="DotNetJsonSerializerMaxJsonLength" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2147483647</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

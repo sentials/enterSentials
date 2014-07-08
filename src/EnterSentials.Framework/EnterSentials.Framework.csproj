@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8884AAD1-AC1D-41E9-BBC5-4F4BB38A02CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EnterSentials.Framework</RootNamespace>
+    <AssemblyName>EnterSentials.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\AuditableBusinessObjectBase.cs" />
+    <Compile Include="Business\IBusinessObject.cs" />
+    <Compile Include="Business\IDataTransferObject.cs" />
+    <Compile Include="Business\BusinessObjectBase.cs" />
+    <Compile Include="Business\DataTransferObjectBase.cs" />
+    <Compile Include="Business\ExceptionManagingExecutableBusinessObjectDispatcher.cs" />
+    <Compile Include="Business\ExecutableBusinessObjectDispatcherBase.cs" />
+    <Compile Include="Business\IExecutableBusinessObjectDispatcher.cs" />
+    <Compile Include="Business\InertExecutableBusinessObjectDispatcher.cs" />
+    <Compile Include="Business\AuditableNameKeyedBusinessObjectBase.cs" />
+    <Compile Include="Business\NameKeyedBusinessObjectBase.cs" />
+    <Compile Include="CodeContracts\Guard.cs" />
+    <Compile Include="Collections\MultiRecursiveKeyedCollection.cs" />
+    <Compile Include="Collections\RecursiveKeyedCollection.cs" />
+    <Compile Include="Configuration\ApplicationConfigurationSection.cs" />
+    <Compile Include="Configuration\ConfigurationElementCollection.cs" />
+    <Compile Include="Configuration\EventConfigurationElement.cs" />
+    <Compile Include="Configuration\EventsConfigurationElement.cs" />
+    <Compile Include="Configuration\EventsConfigurationElementCollection.cs" />
+    <Compile Include="Configuration\FileBasedApplicationConfiguration.cs" />
+    <Compile Include="Configuration\FilterConfigurationElement.cs" />
+    <Compile Include="Configuration\FiltersConfigurationElement.cs" />
+    <Compile Include="Configuration\FiltersConfigurationElementCollection.cs" />
+    <Compile Include="Configuration\IApplicationConfiguration.cs" />
+    <Compile Include="Configuration\KeyedByNameOrTypeConfigurationElement.cs" />
+    <Compile Include="Configuration\PipelineConfigurationElement.cs" />
+    <Compile Include="Configuration\PipelinesConfigurationElement.cs" />
+    <Compile Include="Configuration\PipelinesConfigurationElementCollection.cs" />
+    <Compile Include="Configuration\SubscriberConfigurationElement.cs" />
+    <Compile Include="Configuration\SubscribersConfigurationElement.cs" />
+    <Compile Include="Configuration\SubscribersConfigurationElementCollection.cs" />
+    <Compile Include="Configuration\TypeRepresentingConfigurationElement.cs" />
+    <Compile Include="DatesAndTime\BusinessPeriodType.cs" />
+    <Compile Include="DatesAndTime\ClockType.cs" />
+    <Compile Include="DatesAndTime\DateTimePeriodsResolver.cs" />
+    <Compile Include="DatesAndTime\DateTimeRange.cs" />
+    <Compile Include="DatesAndTime\NullableDateTimeRange.cs" />
+    <Compile Include="DatesAndTime\OpenEndedDateTimeRange.cs" />
+    <Compile Include="Domain\Objects\AuditableAggregateBase.cs" />
+    <Compile Include="Domain\Objects\AuditableNameKeyedEntityBase.cs" />
+    <Compile Include="Domain\Entities\Culture.cs" />
+    <Compile Include="Domain\Objects\AuditableEntityBase.cs" />
+    <Compile Include="Domain\Objects\DomainObjectBase.cs" />
+    <Compile Include="Domain\Objects\EntityBase.cs" />
+    <Compile Include="Domain\Objects\EntityLocalization.cs" />
+    <Compile Include="Domain\Objects\IAuditable.cs" />
+    <Compile Include="Domain\Objects\ICreationDatePersisting.cs" />
+    <Compile Include="Domain\Objects\IDomainObject.cs" />
+    <Compile Include="Domain\Objects\IEntity.cs" />
+    <Compile Include="Domain\Objects\IEntityLocalization.cs" />
+    <Compile Include="Domain\Objects\ILastModifiedDatePersisting.cs" />
+    <Compile Include="Domain\Objects\ILocalizableEntity.cs" />
+    <Compile Include="Domain\Objects\IAggregate.cs" />
+    <Compile Include="Domain\Objects\LocalizableEntity.cs" />
+    <Compile Include="Domain\Objects\NameKeyedEntityBase.cs" />
+    <Compile Include="Domain\Objects\NameKeyedLocalizableEntity.cs" />
+    <Compile Include="Domain\Objects\AggregateBase.cs" />
+    <Compile Include="Domain\Localization\ILocalizationsManager.cs" />
+    <Compile Include="Domain\Localization\LocalizationPending.cs" />
+    <Compile Include="Domain\Localization\LocalizationsManager.cs" />
+    <Compile Include="Domain\Schema\TableFromTypeNameAttribute.cs" />
+    <Compile Include="Domain\Seeding\DomainSeeder.cs" />
+    <Compile Include="Domain\Seeding\SqlDomainSeeder.cs" />
+    <Compile Include="Domain\Services\ComponentsBasedDomainFactory.cs" />
+    <Compile Include="Domain\Services\ExceptionManagingDomainLogicDispatcher.cs" />
+    <Compile Include="Domain\Services\IDomain.cs" />
+    <Compile Include="Domain\Services\IDomainFactory.cs" />
+    <Compile Include="Domain\Services\IDomainLogicDispatcher.cs" />
+    <Compile Include="Domain\Services\InertDomainLogicDispatcher.cs" />
+    <Compile Include="Domain\Services\IReadOnlyRepository.cs" />
+    <Compile Include="Domain\Services\IRepository.cs" />
+    <Compile Include="Domain\Services\IRepositoryFactory.cs" />
+    <Compile Include="Domain\Services\ReadOnlyRepositoryWrapper.cs" />
+    <Compile Include="Email\DispatchCriteriaIgnorantEmailQueue.cs" />
+    <Compile Include="Email\Email.cs" />
+    <Compile Include="Email\EmailDispatchCriteria.cs" />
+    <Compile Include="Email\EmailQueueEntry.cs" />
+    <Compile Include="Email\EmailTemplate.cs" />
+    <Compile Include="Email\IEmailDispatcher.cs" />
+    <Compile Include="Email\IEmailGenerator.cs" />
+    <Compile Include="Email\IEmailQueue.cs" />
+    <Compile Include="Email\IEmailTemplateResolver.cs" />
+    <Compile Include="Email\InertEmailDispatcher.cs" />
+    <Compile Include="Email\InertEmailTemplateResolver.cs" />
+    <Compile Include="Email\TemplateBasedEmailGenerator.cs" />
+    <Compile Include="Events\Publish.cs" />
+    <Compile Include="ExceptionHandling\AuthorizationException.cs" />
+    <Compile Include="ExceptionHandling\BusinessLogicException.cs" />
+    <Compile Include="ExceptionHandling\DataAccessException.cs" />
+    <Compile Include="ExceptionHandling\ExceptionManagerBase.cs" />
+    <Compile Include="ExceptionHandling\IExceptionManager.cs" />
+    <Compile Include="ExceptionHandling\InertExceptionManager.cs" />
+    <Compile Include="ExceptionHandling\ServiceOperationDispatchSerializationException.cs" />
+    <Compile Include="ExceptionHandling\UnableToRemoveEntityDueToRelationshipConstraintsException.cs" />
+    <Compile Include="Expressions\PropertyPathExpressionVisitor.cs" />
+    <Compile Include="Extensions\AppDomainExtensions.cs" />
+    <Compile Include="Extensions\AssemblyExtensions.cs" />
+    <Compile Include="Extensions\ByteExtensions.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\DateTimeRangeExtensions.cs" />
+    <Compile Include="Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Extensions\ExpressionExtensions.cs" />
+    <Compile Include="Extensions\IAuthorizationFailureExtensions.cs" />
+    <Compile Include="Extensions\IComponentsExtensions.cs" />
+    <Compile Include="Extensions\IDictionaryExtensions.cs" />
+    <Compile Include="Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="Extensions\IntExtensions.cs" />
+    <Compile Include="Extensions\LongExtensions.cs" />
+    <Compile Include="Extensions\MethodInfoExtensions.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\PropertyInfoExtensions.cs" />
+    <Compile Include="Extensions\SerializationParameterExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Extensions\ValidationResultExtensions.cs" />
+    <Compile Include="FileAccess\IFileRepository.cs" />
+    <Compile Include="FileAccess\IFileRepositoryFactory.cs" />
+    <Compile Include="Logging\Etw\ActivatorBasedLoggingSinkFactory.cs" />
+    <Compile Include="Logging\Etw\ComponentsBasedLoggingPipelineFactory.cs" />
+    <Compile Include="Logging\Etw\ConfiguredLoggingPipelines.cs" />
+    <Compile Include="Logging\Etw\EmptyLoggingPipelineConfigurations.cs" />
+    <Compile Include="Logging\Etw\EventSource\LogEventId.cs" />
+    <Compile Include="Logging\Etw\EventSource\LogEventSource.cs" />
+    <Compile Include="Logging\Etw\EventSource\LogTask.cs" />
+    <Compile Include="Logging\Etw\ILoggingPipelineConfigurations.cs" />
+    <Compile Include="Logging\Etw\ILoggingPipelineFactory.cs" />
+    <Compile Include="Logging\Etw\ILoggingPipelines.cs" />
+    <Compile Include="Logging\Etw\ILoggingSink.cs" />
+    <Compile Include="Logging\Etw\ILoggingSinkFactory.cs" />
+    <Compile Include="Logging\Etw\ILoggingSinkTarget.cs" />
+    <Compile Include="Logging\Etw\LoggingFilter.cs" />
+    <Compile Include="Logging\Etw\LoggingPipeline.cs" />
+    <Compile Include="Logging\Etw\LoggingPipelineConfiguration.cs" />
+    <Compile Include="Logging\Etw\LoggingPipelineConfigurationsBase.cs" />
+    <Compile Include="Logging\Etw\LoggingSinkConfiguration.cs" />
+    <Compile Include="Logging\EventSourceLogAdapter.cs" />
+    <Compile Include="Logging\ILog.cs" />
+    <Compile Include="Logic\Decoupling\BufferingEventAggregator.cs" />
+    <Compile Include="Logic\Decoupling\ComponentsBasedEventAggregator.cs" />
+    <Compile Include="Logic\Decoupling\ConfigurationBasedEventSubscribersResolver.cs" />
+    <Compile Include="Logic\Decoupling\ContextProvidingEvent.cs" />
+    <Compile Include="Logic\Decoupling\Event.cs" />
+    <Compile Include="Logic\Decoupling\EventSubject.cs" />
+    <Compile Include="Logic\Decoupling\IContextProvidingEvent.cs" />
+    <Compile Include="Logic\Decoupling\IEvent.cs" />
+    <Compile Include="Logic\Decoupling\IEventAggregator.cs" />
+    <Compile Include="Logic\Decoupling\IEventManager.cs" />
+    <Compile Include="Logic\Decoupling\IEventPublisher.cs" />
+    <Compile Include="Logic\Decoupling\IEventPublishingBuffer.cs" />
+    <Compile Include="Logic\Decoupling\IEventResolver.cs" />
+    <Compile Include="Logic\Decoupling\IEventSubscribersResolver.cs" />
+    <None Include="Logic\Decoupling\InterDomainEventPublisher.cs" />
+    <Compile Include="Logic\Decoupling\SimpleEventPublishingBuffer.cs" />
+    <Compile Include="Logic\Decoupling\UnitOfWorkBasedEventObserver.cs" />
+    <Compile Include="Logic\Encapsulation\AttemptResult.cs" />
+    <Compile Include="Logic\Encapsulation\ComponentsBasedCommandFactory.cs" />
+    <Compile Include="Logic\Encapsulation\ComponentsBasedQueryFactory.cs" />
+    <Compile Include="Logic\Encapsulation\ExecutionOutcome.cs" />
+    <Compile Include="Logic\Encapsulation\FluidAPI\ExecutableObjectSelection.cs" />
+    <Compile Include="Logic\Encapsulation\FluidAPI\ExecutionContext.cs" />
+    <Compile Include="Logic\Encapsulation\FluidAPI\FluidExecutableObjectExecutor.cs" />
+    <Compile Include="Logic\Encapsulation\FluidAPI\IExecutableContext.cs" />
+    <Compile Include="Logic\Encapsulation\FluidAPI\IExecutableObjectProvider.cs" />
+    <Compile Include="Logic\Encapsulation\FluidAPI\IUnitOfWorkProvider.cs" />
+    <Compile Include="Logic\Encapsulation\FluidAPI\UnitOfWorkSelection.cs" />
+    <Compile Include="Logic\Encapsulation\ICommand.cs" />
+    <Compile Include="Logic\Encapsulation\ICommandFactory.cs" />
+    <Compile Include="Logic\Encapsulation\IExecutableObject.cs" />
+    <Compile Include="Logic\Encapsulation\IExecutionOutcome.cs" />
+    <Compile Include="Logic\Encapsulation\IQuery.cs" />
+    <Compile Include="Logic\Encapsulation\IQueryFactory.cs" />
+    <Compile Include="Logic\Encapsulation\NoResult.cs" />
+    <Compile Include="Logic\Encapsulation\PipesAndFilters\ConfigurationBasedFiltersResolver.cs" />
+    <Compile Include="Logic\Encapsulation\PipesAndFilters\ExecutePipeline.cs" />
+    <Compile Include="Logic\Encapsulation\PipesAndFilters\IFilter.cs" />
+    <Compile Include="Logic\Encapsulation\PipesAndFilters\IFilterResolver.cs" />
+    <Compile Include="Logic\Encapsulation\PipesAndFilters\IPipelineFiltersResolver.cs" />
+    <Compile Include="Logic\Encapsulation\PipesAndFilters\Pipeline.cs" />
+    <Compile Include="Logic\Encapsulation\PipesAndFilters\UnitOfWorkBasedFilterResolver.cs" />
+    <Compile Include="Logic\Encapsulation\UnitOfWorkBasedCommand.cs" />
+    <Compile Include="Logic\Encapsulation\UnitOfWorkBasedExecutableObject.cs" />
+    <Compile Include="Logic\Encapsulation\UnitOfWorkBasedQuery.cs" />
+    <Compile Include="Messaging\IMessage.cs" />
+    <Compile Include="Messaging\ITopicSubscription.cs" />
+    <Compile Include="ObjectMapping\DefinedCopiers.cs" />
+    <Compile Include="ObjectMapping\DefinedTranslators.cs" />
+    <Compile Include="ObjectMapping\IObjectCopier.cs" />
+    <Compile Include="ObjectMapping\IObjectMapperFactory.cs" />
+    <Compile Include="ObjectMapping\IObjectTranslator.cs" />
+    <Compile Include="ObjectMapping\ObjectCopierBase.cs" />
+    <Compile Include="ObjectMapping\ObjectTranslatorBase.cs" />
+    <Compile Include="ObjectMapping\SourceProperties.cs" />
+    <Compile Include="ParsingAndValidation\Attributes\IdAttribute.cs" />
+    <Compile Include="ParsingAndValidation\Attributes\RequiredAndNonDefaultAttribute.cs" />
+    <Compile Include="ParsingAndValidation\Attributes\RequiredAndNonDefaultNorEmptyAttribute.cs" />
+    <Compile Include="ParsingAndValidation\EmailAddressValidator.cs" />
+    <Compile Include="ParsingAndValidation\IValidatable.cs" />
+    <Compile Include="ParsingAndValidation\SsnParser.cs" />
+    <Compile Include="ParsingAndValidation\ValidatableObject.cs" />
+    <Compile Include="Policy\AssemblyNamingPolicy.cs" />
+    <Compile Include="Policy\DomainPolicy.cs" />
+    <Compile Include="Policy\ExceptionPolicy.cs" />
+    <Compile Include="Policy\Naming.cs" />
+    <Compile Include="Policy\RegularExpression.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ScopeManagement\ComponentsBasedUnitOfWorkFactory.cs" />
+    <Compile Include="ScopeManagement\ContextManagingUnitOfWork.cs" />
+    <Compile Include="ScopeManagement\ContextManagingUnitOfWorkFactory.cs" />
+    <Compile Include="ScopeManagement\ICommittable.cs" />
+    <Compile Include="ScopeManagement\IContextProvider.cs" />
+    <Compile Include="ScopeManagement\INotifyDisposed.cs" />
+    <Compile Include="ScopeManagement\IUnitOfWork.cs" />
+    <Compile Include="ScopeManagement\IUnitOfWorkFactory.cs" />
+    <Compile Include="ScopeManagement\ScopeLimitedObject.cs" />
+    <Compile Include="ScopeManagement\UnitOfWorkFactoryBase.cs" />
+    <Compile Include="Security\AuthorizationFailure.cs" />
+    <Compile Include="Security\Claims\ApplicationClaim.cs" />
+    <Compile Include="Security\Claims\ApplicationClaimTypes.cs" />
+    <Compile Include="Security\Claims\Claim.cs" />
+    <Compile Include="Security\Services\CryptographerBasedPasswordManager.cs" />
+    <Compile Include="Security\Services\CryptographerBasedSsnManager.cs" />
+    <Compile Include="Security\Services\IAuthorizationFailure.cs" />
+    <Compile Include="Security\Services\ICryptographer.cs" />
+    <Compile Include="Security\Services\IPasswordManager.cs" />
+    <Compile Include="Security\Services\ISsnManager.cs" />
+    <Compile Include="Security\Services\SaltedHashingCryptographer.cs" />
+    <Compile Include="Serialization\SerializationParameter.cs" />
+    <Compile Include="Serialization\SerializationProperty.cs" />
+    <Compile Include="Serialization\Xml\DotNetBasedXmlSerializer.cs" />
+    <Compile Include="Serialization\Json\DotNetBasedJsonSerializer.cs" />
+    <Compile Include="Serialization\Xml\IDotNetXmlSerializerFactory.cs" />
+    <Compile Include="Serialization\Json\IDotNetJsonSerializerFactory.cs" />
+    <Compile Include="Serialization\Json\IJsonSerializer.cs" />
+    <Compile Include="Serialization\IStringSerializer.cs" />
+    <Compile Include="Serialization\Xml\IXmlSerializer.cs" />
+    <Compile Include="Serialization\Xml\XmlSerializerBasedStringSerializer.cs" />
+    <Compile Include="Serialization\Json\JsonSerializerBasedStringSerializer.cs" />
+    <Compile Include="Serialization\Xml\NaiveXmlSerializerFactory.cs" />
+    <Compile Include="Serialization\Json\NaiveDotNetJsonSerializerFactory.cs" />
+    <Compile Include="ServiceLocation\ComponentContainer.cs" />
+    <Compile Include="ServiceLocation\Components.cs" />
+    <Compile Include="ServiceLocation\IComponents.cs" />
+    <Compile Include="Services\Consumption\IWebServiceClient.cs" />
+    <Compile Include="Services\Consumption\IWebServiceClientFactory.cs" />
+    <Compile Include="Services\Consumption\JsonWebServiceClient.cs" />
+    <Compile Include="Services\Consumption\WebServiceClient.cs" />
+    <Compile Include="Services\Consumption\WebServiceClientFactory.cs" />
+    <Compile Include="Services\Consumption\WebServiceProxy.cs" />
+    <Compile Include="Services\Web\ContentType.cs" />
+    <Compile Include="Services\Web\Cors.cs" />
+    <Compile Include="Services\Web\Http.cs" />
+    <Compile Include="Services\Responses\AttemptResponse.cs" />
+    <Compile Include="Services\Responses\ServiceOperationResponse.cs" />
+    <Compile Include="Services\ServiceOperationError.cs" />
+    <Compile Include="Services\WebServiceMessageFormat.cs" />
+    <Compile Include="Services\Web\ICorsConfiguration.cs" />
+    <Compile Include="StartupAndShutdown\EventSubscribingBootstrapper.cs" />
+    <Compile Include="StartupAndShutdown\IBootstrapper.cs" />
+    <Compile Include="StartupAndShutdown\LoggingConfigurationBootstrapper.cs" />
+    <Compile Include="StartupAndShutdown\ObjectTranslatorRegisteringBootstrapper.cs" />
+    <Compile Include="SyntacticSugar\Name.cs" />
+    <Compile Include="SyntacticSugar\NavigationProperties.cs" />
+    <Compile Include="SyntacticSugar\No.cs" />
+    <Compile Include="SyntacticSugar\With.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF EXIST "$(TargetDir)$(TargetName)$(TargetExt).config" xcopy /ricey "$(TargetDir)$(TargetName)$(TargetExt).config" "$(ProjectDir)..\..\bin\"
+IF EXIST "$(TargetDir)$(TargetName).pdb" xcopy /ricey "$(TargetDir)$(TargetName).pdb" "$(ProjectDir)..\..\bin\"
+xcopy /ricey "$(TargetPath)" "$(ProjectDir)..\..\bin\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

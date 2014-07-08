@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{160A6A5C-2C46-4BF3-9E17-3198DE2EBFBD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EnterSentials.Framework.Services.WCF</RootNamespace>
+    <AssemblyName>EnterSentials.Framework.Services.WCF</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Channels" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cors\Reference\EnableCorsEndpointBehavior_old.cs" />
+    <Compile Include="ExceptionHandling\ExceptionShieldingWebHttpEndpointBehavior.cs" />
+    <Compile Include="Extensions\OperationDescriptionExtensions.cs" />
+    <Compile Include="Ioc\IocSupportingServiceBehavior.cs" />
+    <Compile Include="Cors\CorsState.cs" />
+    <Compile Include="Cors\EnableCorsAttribute.cs" />
+    <None Include="Cors\Reference\CorsEnablingMessageInspector_old.cs" />
+    <Compile Include="Cors\CorsPreflightRequestHandlingMessageFormatter.cs" />
+    <Compile Include="Cors\EnableCorsBehaviorExtensionElement.cs" />
+    <Compile Include="Cors\CorsPreflightRequestHandlingOperationInvoker.cs" />
+    <Compile Include="Cors\CorsEnablingMessageInspector.cs" />
+    <Compile Include="Serialization\CustomJsonContentTypeMapper.cs" />
+    <Compile Include="Serialization\UseCustomJsonSerializationBehaviorExtensionElement.cs" />
+    <Compile Include="Util\Current.cs" />
+    <Compile Include="Util\BodyWriters\InertBodyWriter.cs" />
+    <Compile Include="Util\MessageInspectors\CustomHeaderApplyingMessageInspector.cs" />
+    <None Include="Cors\Reference\ApplyCorsConfigurationEndpointBehavior.cs" />
+    <Compile Include="ExceptionHandling\ExceptionManagerBasedErrorHandler.cs" />
+    <Compile Include="Ioc\ComponentContainerExtension.cs" />
+    <Compile Include="Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Extensions\IExtensibleObjectExtensions.cs" />
+    <Compile Include="Ioc\IServiceInstanceProviderFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Util\BodyWriters\RawBodyWriter.cs" />
+    <Compile Include="Serialization\CustomJsonSerializationClientMessageFormatter.cs" />
+    <Compile Include="Serialization\CustomJsonSerializationDispatchMessageFormatter.cs" />
+    <Compile Include="Serialization\CustomJsonSerializationWebHttpBehavior.cs" />
+    <Compile Include="Hosting\WebService.cs" />
+    <Compile Include="Hosting\WebServiceHostFactoryBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EnterSentials.Framework.Newtonsoft\EnterSentials.Framework.Newtonsoft.csproj">
+      <Project>{6b6b0c3e-3685-462e-baec-95adf6d13e7b}</Project>
+      <Name>EnterSentials.Framework.Newtonsoft</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EnterSentials.Framework\EnterSentials.Framework.csproj">
+      <Project>{8884aad1-ac1d-41e9-bbc5-4f4bb38a02cd}</Project>
+      <Name>EnterSentials.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF EXIST "$(TargetDir)$(TargetName)$(TargetExt).config" xcopy /ricey "$(TargetDir)$(TargetName)$(TargetExt).config" "$(ProjectDir)..\..\bin\"
+IF EXIST "$(TargetDir)$(TargetName).pdb" xcopy /ricey "$(TargetDir)$(TargetName).pdb" "$(ProjectDir)..\..\bin\"
+xcopy /ricey "$(TargetPath)" "$(ProjectDir)..\..\bin\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

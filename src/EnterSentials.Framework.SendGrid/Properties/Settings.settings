@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EnterSentials.Framework.SendGrid.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SendGridUserName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">azure_04ff91e7ecc84994d1d0f18a55625bc4@azure.com</Value>
+    </Setting>
+    <Setting Name="SendGridPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">KDm5b5JDFvXctwn</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

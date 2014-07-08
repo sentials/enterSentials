@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EnterSentials.Framework.Web.AspNet.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConventionalControllerNameSuffix" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Controller</Value>
+    </Setting>
+    <Setting Name="HttpApplicationGlobalExceptionPolicyName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Default</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

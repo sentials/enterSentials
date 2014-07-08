@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EnterSentials.Framework.EntLib.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DefaultLoggingAzureInstanceName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">entersentialsstorage</Value>
+    </Setting>
+    <Setting Name="DefaultLoggingAzureStorageAccountConnectionString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DefaultEndpointsProtocol=https;AccountName=entersentialsstorage;AccountKey=KrC1Ivaaqqj9v8Pm+yNF3sNKmM/jYc30crOC1BNUTUKEbLFrUPsb0S8+DvLhr8gxP7s1xIFU+F1cDn2gHn9ljg==</Value>
+    </Setting>
+    <Setting Name="DefaultLoggingAzureTableName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SLABLogsTable</Value>
+    </Setting>
+    <Setting Name="AllowLoggingToAzureTable" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AllowLoggingToWindowsEventLog" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DefaultLoggingEventLevel" Type="System.Diagnostics.Tracing.EventLevel" Scope="Application">
+      <Value Profile="(Default)">Verbose</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
